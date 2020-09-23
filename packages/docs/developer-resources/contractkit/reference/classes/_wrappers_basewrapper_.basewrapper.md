@@ -38,6 +38,8 @@ Base ContractWrapper
 
   ↳ [LockedGoldWrapper](_wrappers_lockedgold_.lockedgoldwrapper.md)
 
+  ↳ [MetaTransactionWalletWrapper](_wrappers_metatransactionwallet_.metatransactionwalletwrapper.md)
+
   ↳ [MultiSigWrapper](_wrappers_multisig_.multisigwrapper.md)
 
   ↳ [ReserveWrapper](_wrappers_reserve_.reservewrapper.md)
@@ -56,6 +58,7 @@ Base ContractWrapper
 
 ### Properties
 
+* [contract](_wrappers_basewrapper_.basewrapper.md#contract)
 * [events](_wrappers_basewrapper_.basewrapper.md#events)
 
 ### Accessors
@@ -84,6 +87,14 @@ Name | Type |
 **Returns:** *[BaseWrapper](_wrappers_basewrapper_.basewrapper.md)*
 
 ## Properties
+
+###  contract
+
+• **contract**: *T*
+
+*Defined in [packages/contractkit/src/wrappers/BaseWrapper.ts:20](https://github.com/celo-org/celo-monorepo/blob/master/packages/contractkit/src/wrappers/BaseWrapper.ts#L20)*
+
+___
 
 ###  events
 
