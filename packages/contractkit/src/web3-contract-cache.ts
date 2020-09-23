@@ -15,6 +15,7 @@ import { newGasPriceMinimum } from './generated/GasPriceMinimum'
 import { newGoldToken } from './generated/GoldToken'
 import { newGovernance } from './generated/Governance'
 import { newLockedGold } from './generated/LockedGold'
+import { newMetaTransactionWallet } from './generated/MetaTransactionWallet'
 import { newMultiSig } from './generated/MultiSig'
 import { newProxy } from './generated/Proxy'
 import { newRandom } from './generated/Random'
@@ -45,6 +46,7 @@ export const ContractFactories = {
   [CeloContract.Governance]: newGovernance,
   [CeloContract.LockedGold]: newLockedGold,
   [CeloContract.MultiSig]: newMultiSig,
+  [CeloContract.MetaTransactionWallet]: newMetaTransactionWallet,
   [CeloContract.Random]: newRandom,
   [CeloContract.Registry]: newRegistry,
   [CeloContract.Reserve]: newReserve,
