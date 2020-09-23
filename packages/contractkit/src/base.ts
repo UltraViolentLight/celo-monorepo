@@ -16,6 +16,7 @@ export enum CeloContract {
   GoldToken = 'GoldToken',
   Governance = 'Governance',
   LockedGold = 'LockedGold',
+  MetaTransactionWallet = 'MetaTransactionWallet',
   MultiSig = 'MultiSig',
   Random = 'Random',
   Registry = 'Registry',
@@ -24,7 +25,6 @@ export enum CeloContract {
   StableToken = 'StableToken',
   TransferWhitelist = 'TransferWhitelist',
   Validators = 'Validators',
-  MetaTransactionWallet = 'MetaTransactionWallet',
 }
 
 export const ProxyContracts = Object.keys(CeloContract).map((c) => `${c}Proxy`)
