@@ -78,7 +78,7 @@ If patches need to be applied before the next scheduled smart contract release, 
 
 ## Promotion process
 
-Deploying a new contract release should occur with the following process:
+Deploying a new contract release should occur with the following process. On-chain governance proposals should be submitted on Tuesdays for consistency and predictability.
 
 <table>
   <tr>
@@ -91,7 +91,7 @@ Deploying a new contract release should occur with the following process:
       <ol>
         <li>Create a <code>release/contracts/N</code> branch at the desired commit.</li>
         <li>Submit this branch to a reputable third party auditor for review.</li>
-        <li>Begin drafting Release Notes and get feedback.</li>
+        <li>Begin drafting Release Notes and get team feedback.</li>
       </ol>
     </td>
   </tr>
@@ -100,7 +100,7 @@ Deploying a new contract release should occur with the following process:
     <td>
       <ol>
         <li>Receive report from auditors.</li>
-        <li>Finalize Release Notes: add audit summary and incorporate feedback.</li>
+        <li>Finalize Release Notes: add audit summary and incorporate team feedback.</li>
         <li>If all issues in the audit report have straightforward fixes:
           <ol>
             <li> Submit a governance proposal draft using this format: https://github.com/celo-org/celo-proposals/blob/master/CGPs/template.md</li>
@@ -118,7 +118,11 @@ Deploying a new contract release should occur with the following process:
     <td>
       <ol>
         <li>Tag the release on Github using the finalized Release Notes.</li>
-        <li>Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Baklava as well as submit a governance proposal.</li>
+        <li>On Tuesday: Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Baklava as well as submit a governance proposal.
+         <ul>
+          <li> This involves sheperding the proposal through an expedited <a href="https://docs.celo.org/celo-codebase/protocol/governance"> governance process.</a></li>
+         </ul>
+       </li>
       </ol>
     </td>
   </tr>
@@ -127,7 +131,15 @@ Deploying a new contract release should occur with the following process:
     <td>
       <ol>
         <li>Confirm all contracts working as intended on Baklava.</li>
-        <li>Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Mainnet as well as submit a governance proposal.</li>
+        <li>On Tuesday: Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Mainnet as well as submit a governance proposal.</li>
+       <li>Update the corresponding governance proposal with the updated on-chain proposalID and mark CGP status as "PROPOSED".</li>
+       <li>Product to engage with community about participation in the proposal???
+       <li>Monitor the progress of the proposal through the <a href="https://docs.celo.org/celo-codebase/protocol/governance">governance process.</a>
+        <ul>
+         <li>Currently the governance process should take approximately 1 week: 24 hours for the dequeue process, 24 hours for the approval process, and 5 days for the referendum process. After which, the proposal is either declined or is ready to be executed within 3 days.</li>
+         <li>For updated timeframes, use the celocli: <code>celocli network:parameters</code><li> 
+        </ul>
+       </li>
       </ol>
     </td>
   </tr>
@@ -135,7 +147,8 @@ Deploying a new contract release should occur with the following process:
     <td>T+4w</td>
     <td>
       <ol>
-        <li>Confirm all contracts working as intended on Mainnet.</li>
+        <li>If passed, confirm all contracts working as intended on Mainnet.</li>
+        <li>Change corresponding CGP status to EXCECUTED</li>
         <li>Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Alfajores as well as submit a governance proposal.</li>
       </ol>
     </td>
