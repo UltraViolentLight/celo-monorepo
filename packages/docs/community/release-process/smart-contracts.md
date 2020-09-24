@@ -118,7 +118,7 @@ Deploying a new contract release should occur with the following process:
     <td>
       <ol>
         <li>Tag the release on Github using the finalized Release Notes.</li>
-        <li>Run the smart contract release script to deploy the contracts to Baklava and submit a governance proposal.</li>
+        <li>Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Baklava as well as submit a governance proposal.</li>
       </ol>
     </td>
   </tr>
@@ -127,7 +127,7 @@ Deploying a new contract release should occur with the following process:
     <td>
       <ol>
         <li>Confirm all contracts working as intended on Baklava.</li>
-        <li>Run the smart contract release script to deploy the contracts to Alfajores and submit a governance proposal.</li>
+        <li>Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Mainnet as well as submit a governance proposal.</li>
       </ol>
     </td>
   </tr>
@@ -135,8 +135,8 @@ Deploying a new contract release should occur with the following process:
     <td>T+4w</td>
     <td>
       <ol>
-        <li>Confirm all contracts working as intended on Alfajores.</li>
-        <li>Run the smart contract release script to deploy the contracts to Mainnet and submit a governance proposal.</li>
+        <li>Confirm all contracts working as intended on Mainnet.</li>
+        <li>Run the <a href="https://docs.celo.org/community/release-process/smart-contracts#build-process">smart contract release script</a> in order to to deploy the contracts to Alfajores as well as submit a governance proposal.</li>
       </ol>
     </td>
   </tr>
@@ -144,7 +144,7 @@ Deploying a new contract release should occur with the following process:
     <td>T+5w</td>
     <td>
       <ol>
-        <li>Confirm all contracts working as intended on Mainnet.</li>
+        <li>Confirm all contracts working as intended on Alfajores.</li>
       </ol>
     </td>
   </tr>
