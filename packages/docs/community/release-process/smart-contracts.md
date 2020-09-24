@@ -91,6 +91,7 @@ Deploying a new contract release should occur with the following process:
       <ol>
         <li>Create a <code>release/contracts/N</code> branch at the desired commit.</li>
         <li>Submit this branch to a reputable third party auditor for review.</li>
+        <li>Begin drafting Release Notes and get feedback.</li>
       </ol>
     </td>
   </tr>
@@ -99,7 +100,14 @@ Deploying a new contract release should occur with the following process:
     <td>
       <ol>
         <li>Receive report from auditors.</li>
-        <li>If all issues in the audit report have straightforward fixes, announce a forthcoming smart contract release. </li>
+        <li>Finalize Release Notes: add audit summary and incorporate feedback.</li>
+        <li>If all issues in the audit report have straightforward fixes:
+          <ol>
+            <li> Submit a governance proposal draft using this format: https://github.com/celo-org/celo-proposals/blob/master/CGPs/template.md</li>
+            <li> Announce forthcoming smart contract release on: https://forum.celo.org/c/governance</li>
+            <li> Product to have direct communication with stakeholders???</li>
+          </ol>
+        </li>
         <li>Commit audit fixes to <code>master</code> and cherry-pick to the release branch.</li>
         <li>Submit audit fixes to auditors for review. </li>
       </ol>
@@ -109,7 +117,7 @@ Deploying a new contract release should occur with the following process:
     <td>T+2w</td>
     <td>
       <ol>
-        <li>Tag the release on Github.</li>
+        <li>Tag the release on Github using the finalized Release Notes.</li>
         <li>Run the smart contract release script to deploy the contracts to Baklava and submit a governance proposal.</li>
       </ol>
     </td>
