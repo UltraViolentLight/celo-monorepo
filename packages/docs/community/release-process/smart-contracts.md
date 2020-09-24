@@ -21,11 +21,6 @@ Mixin contracts and libraries are considered part of the contracts that consume 
 
 Each release is identified by a unique monotonically increasing number `N`, with `1` being the first release.
 
-### Contracts
-Every deployed smart contract has its current version number as a constant which is publicly accessible via the `getVersion()` function, which returns the storage, major, minor, and patch version. Version number is encoded in the Solidity source and updated as part of code changes.
-
-Contracts deployed to a live network without the `getVersion()` function, such as the original set of core contracts, are to be considered version `1.0.0.0`.
-
 ### Git branches
 Every smart contract release has a designated branch, e.g. `release/contracts/N` in the celo-monorepo.
 
@@ -34,8 +29,13 @@ Ongoing smart contract development is done on the `master` branch.
 ### Github tags
 All release branches should be tagged as such, e.g. `celo-contracts-N`. Each should include a summary of the release contents.
 
+### Contracts
+Every deployed smart contract has its current version number as a constant which is publicly accessible via the `getVersion()` function, which returns the storage, major, minor, and patch version. Version number is encoded in the Solidity source and updated as part of code changes.
+
+Contracts deployed to a live network without the `getVersion()` function, such as the original set of core contracts, are to be considered version `1.0.0.0`.
+
 ## Build process
-A new release can be built by running the following script:
+A new release can be built by running the following script from branch containing the new release contracts:
 
 ```bash
 yarn run release-contracts -d $CURRENTLY_RELEASED_BRANCH -f $FROM_ADDRESS -n $NETWORK
